@@ -234,7 +234,7 @@ function playRound(){
         }
 }
  database.ref("/chat/").on("child_added", function(snapshot) {
-     console.log(snapshot.val())
-     var message=$('<div>').text(snapshot.val())
+     var message=$('<div>').text(snapshot.val());
+     message.attr('class','messageClass');
     $('#chatDisplay').prepend(message);
  })

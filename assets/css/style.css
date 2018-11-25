@@ -15,13 +15,17 @@ button{
     margin:5px;
 }
 #chatDisplay{
+    margin-top:10px;
+    margin-bottom: 20px;
     overflow:auto;
-    height: 150px;
+    height: 200px;
 	width: 100%;
 	text-align: left;
   	border-radius: 10px;
-  	background-color: #cdd9ea;
-	font-size: 1em;
-	color: #084596;
-	padding: 1em 1em 1em 1em;
+  	background-color: #e9eeb0;
+	color: #320cdd;
+}
+.messageClass{
+    margin:3px;
+    font-size:1.6em;
 }
