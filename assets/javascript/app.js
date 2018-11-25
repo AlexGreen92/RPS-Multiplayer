@@ -174,7 +174,7 @@ function playRound(){
             console.log(player1,player2)
             database.ref().child("/players/player2").set(player2);
         } else if (player1.choice == "rock"&&player2.choice == "paper") {
-            $('#result').text('Last round: '+player1.name+' wins!!!');
+            $('#result').text('Last round: '+player2.name+' wins!!!');
             player1.loss+=1;
             player1.choice='';
             database.ref().child("/players/player1").set(player1);
@@ -183,7 +183,7 @@ function playRound(){
             console.log(player1,player2)
             database.ref().child("/players/player2").set(player2);
         } else if (player1.choice == "paper"&&player2.choice == "scissors") {
-            $('#result').text('Last round: '+player1.name+' wins!!!');
+            $('#result').text('Last round: '+player2.name+' wins!!!');
             player1.loss+=1;
             player1.choice='';
             database.ref().child("/players/player1").set(player1);
@@ -201,7 +201,7 @@ function playRound(){
             console.log(player1,player2)
             database.ref().child("/players/player2").set(player2);
         } else if (player1.choice == "scissors"&&player2.choice == "rock") {
-            $('#result').text('Last round: '+player1.name+' wins!!!');
+            $('#result').text('Last round: '+player2.name+' wins!!!');
             player1.loss+=1;
             player1.choice='';
             database.ref().child("/players/player1").set(player1);
