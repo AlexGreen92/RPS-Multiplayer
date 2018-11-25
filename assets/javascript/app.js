@@ -27,11 +27,11 @@ $(document).ready(function(){
                     loss: 0,
                     tie: 0,
                     choice: '',
-                    connectionStatus:'player1 is connected'
+                    connectionStatus: $('#playerName').val()+' is connected'
                 };
                 database.ref().child("/players/player1").set(player1);
-                
                 database.ref("/players/player1").onDisconnect().remove();
+                $('#playerName').val('');
             }else if(!player2&&!player1Identification){
                 player2Identification=true;
                 player2 = {
@@ -40,10 +40,11 @@ $(document).ready(function(){
                     loss: 0,
                     tie: 0,
                     choice: '',
-                    connectionStatus:'player2 is connected'
+                    connectionStatus: $('#playerName').val()+' is connected'
                 };
                 database.ref().child("/players/player2").set(player2);
                 database.ref("/players/player2").onDisconnect().remove();
+                $('#playerName').val('');
             }
         }
     })
@@ -82,6 +83,15 @@ $(document).ready(function(){
             player2.choice='scissors';
             database.ref().child("/players/player2").set(player2);
         }
+    })
+    $('#sendMessage').on('click',function(){
+        event.preventDefault();
+        if(player1Identification){
+            database.ref('/chat').push(player1.name+' : '+$('#chatInput').val())
+        }else if(player2Identification){
+            database.ref('/chat').push(player2.name+' : '+$('#chatInput').val())
+        }
+        $('#chatInput').val('')
     })
 });
 function loadEmptyPlayer1(){
@@ -153,6 +163,9 @@ database.ref("/players/").on("value", function(snapshot) {
     if (snapshot.child("player1").exists()&&snapshot.child("player2").exists()) {
         if(snapshot.val().player1.choice&&snapshot.val().player2.choice){playRound()}
     }
+    if (!player1 && !player2) {
+		database.ref("/chat/").remove();
+    }
 })
 function playRound(){
     if (player1.choice == player2.choice) {
@@ -220,3 +233,8 @@ function playRound(){
             database.ref().child("/players/player2").set(player2);
         }
 }
+ database.ref("/chat/").on("child_added", function(snapshot) {
+     console.log(snapshot.val())
+     var message=$('<div>').text(snapshot.val())
+    $('#chatDisplay').prepend(message);
+ })

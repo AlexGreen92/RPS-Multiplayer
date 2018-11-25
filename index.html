@@ -15,20 +15,24 @@
 <body>  
         <div class='container'>
             <div class = 'row'>
-                <div class='col-md text-center'>
+                <div class='col-md-3'></div>
+                <div class='col-md-6 text-center'>
                     <input id='playerName'>
-                    <button id='nameChosen'>Submit Name</button>
+                    <button class='btn btn-danger' id='nameChosen'>Submit Name</button>
                 </div>
+                <div class='col-md-3'></div>
             </div>
             <div class='row'>
-                <div class ='col-md-3 text-center'>
+                <div class ='col-md-3 text-center' id='player1Area'>
                     <h3 id='player1Name'></h3>
                     <h4>Wins: </h4><h4 id='player1Wins'></h4>
                     <h4>Losses :</h4><h4 id='player1Losses'></h4>
                     <h4>Ties :</h4><h4 id='player1Tie'></h4>
-                    <button id='player1ChoiceRock'><h5 >Choose Rock</h5></button>
-                    <button id='player1ChoicePaper'><h5 >Choose Paper</h5></button>
-                    <button id='player1ChoiceScissors'><h5 >Choose Scissors</h5></button>
+                    <div>
+                    <button class='btn btn-info' id='player1ChoiceRock'><h5 >Choose Rock</h5></button>
+                    <button class='btn btn-info' id='player1ChoicePaper'><h5 >Choose Paper</h5></button>
+                    <button class='btn btn-info' id='player1ChoiceScissors'><h5 >Choose Scissors</h5></button>
+                    </div>
                 </div>
                 <div class ='col-md-6 text-center' id='playArea'>
                     <h5 id='player1ConnectionStatus'></h5>
@@ -38,15 +42,31 @@
                     <h5 id='player2Choice'></h5>
                     <h4 id='result'></h4>
                 </div>
-                <div class ='col-md-3 text-center'>
+                <div class ='col-md-3 text-center' id='player2Area'>
                         <h3 id='player2Name'></h3>
                         <h4>Wins: </h4><h4 id='player2Wins'></h4>
                         <h4>Losses :</h4><h4 id='player2Losses'></h4>
                         <h4>Ties :</h4><h4 id='player2Tie'></h4>
-                        <button id='player2ChoiceRock'><h5 >Choose Rock</h5></button>
-                        <button id='player2ChoicePaper'><h5 >Choose Paper</h5></button>
-                        <button id='player2ChoiceScissors'><h5 >Choose Scissors</h5></button>
+                        <button class='btn btn-info' id='player2ChoiceRock'><h5 >Choose Rock</h5></button>
+                        <button class='btn btn-info' id='player2ChoicePaper'><h5 >Choose Paper</h5></button>
+                        <button class='btn btn-info' id='player2ChoiceScissors'><h5 >Choose Scissors</h5></button>
                     </div>
+            </div>
+        </br></br>
+            <div class='row'>
+                <div class='col-md-9'>
+                    <input id='chatInput' class='form-control'>
+                </div>
+                <div class='col-md-3'>
+                    <button class='btn btn-success' id='sendMessage'>Send Message</button>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md'>
+                    <div id='chatDisplay'>
+                        
+                    </div>
+                </div>
             </div>
         </div>
 

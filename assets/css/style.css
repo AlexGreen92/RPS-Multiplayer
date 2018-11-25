@@ -1,0 +1,27 @@
+body{
+    background-image: url(../images/dust_scratches.png)
+}
+button{
+    width:100%;
+    margin:5px;
+}
+#player1Area{
+    border:1px solid #4B9DB8;
+}
+#player2Area{
+    border:1px solid #48B87E;
+}
+#chatInput{
+    margin:5px;
+}
+#chatDisplay{
+    overflow:auto;
+    height: 150px;
+	width: 100%;
+	text-align: left;
+  	border-radius: 10px;
+  	background-color: #cdd9ea;
+	font-size: 1em;
+	color: #084596;
+	padding: 1em 1em 1em 1em;
+}
