@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    
+</head>
+<body>  
+        <div class='container'>
+            <div class = 'row'>
+                <div class='col-md text-center'>
+                    <input id='playerName'>
+                    <button id='nameChosen'>Submit Name</button>
+                </div>
+            </div>
+            <div class='row'>
+                <div class ='col-md-3 text-center'>
+                    <h3 id='player1Name'></h3>
+                    <h4>Wins: </h4><h4 id='player1Wins'></h4>
+                    <h4>Losses :</h4><h4 id='player1Losses'></h4>
+                    <h4>Ties :</h4><h4 id='player1Tie'></h4>
+                    <button id='player1ChoiceRock'><h5 >Choose Rock</h5></button>
+                    <button id='player1ChoicePaper'><h5 >Choose Paper</h5></button>
+                    <button id='player1ChoiceScissors'><h5 >Choose Scissors</h5></button>
+                </div>
+                <div class ='col-md-6 text-center' id='playArea'>
+                    <h5 id='player1ConnectionStatus'></h5>
+                    <h5 id='player2ConnectionStatus'></h5>
+                    <h5 id='bothPlayersStatus'></h5>
+                    <h5 id='player1Choice'></h5>
+                    <h5 id='player2Choice'></h5>
+                    <h4 id='result'></h4>
+                </div>
+                <div class ='col-md-3 text-center'>
+                        <h3 id='player2Name'></h3>
+                        <h4>Wins: </h4><h4 id='player2Wins'></h4>
+                        <h4>Losses :</h4><h4 id='player2Losses'></h4>
+                        <h4>Ties :</h4><h4 id='player2Tie'></h4>
+                        <button id='player2ChoiceRock'><h5 >Choose Rock</h5></button>
+                        <button id='player2ChoicePaper'><h5 >Choose Paper</h5></button>
+                        <button id='player2ChoiceScissors'><h5 >Choose Scissors</h5></button>
+                    </div>
+            </div>
+        </div>
+
+</body>
+</html>
