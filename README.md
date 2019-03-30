@@ -2,4 +2,4 @@
 https://alexgreen92.github.io/RPS-Multiplayer/
 Google Firebase Bootstrap 
 Online Rock Paper Scissors game. Type your name and push submit to get ready. You can choose your option with buttons. Once both players has made their choice the computer will tell who win (or tie). Keeping track of win/loss/ties. Also there is a chat functionality.
-Google Firebase
+
